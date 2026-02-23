@@ -1,12 +1,3 @@
-// echo "# learing-js" >> README.md
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/rishabhsanmani/learing-js.git
-// git push -u origin main
-
-
 // object is a data type it is use to store multiple type of data it is denoted by{} it is unordered because it has no indexing 
 // there are two type of notation in object i.e. (.) and []
 
