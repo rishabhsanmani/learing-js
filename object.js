@@ -36,3 +36,12 @@
 // console.log(k)
 // console.log(k[0])
 
+// destructuring of object :-
+// let {name,city} = {name:"Rishabh", city:"Chhindwara"}
+// console.log(name);
+
+// spread operator
+// let ob1 = {name:"Rishabh",city:"Chhindwara"}
+// let ob2 = {contact:12345678}
+// let ob3 = {...ob1,...ob2}
+// console.log(ob3)
