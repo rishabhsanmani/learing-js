@@ -5,6 +5,8 @@ function validate()
     let city=document.getElementById('city').value
     let contact=document.getElementById('contact').value
     let email=document.getElementById('email').value
+    let password=document.getElementById('password').value
+    let cpassword=document.getElementById('cpassword').value
 
     if(name=='')
     {
@@ -62,9 +64,33 @@ function validate()
         return false
     }
 
-    else if (!(email.include("@gmail.com"))){
-        alert("Enter Valid email")
-        document.getElementById('email').focus()
+    // else if(!(email.include('@gmail.com'))){
+    //     alert("Please enter valid email")
+    //     document.getElementById('email').focus()
+    //     return false
+    // }
+
+    else if (password==''){
+        alert("please enter password")
+        document.getElementById('password').focus()
+        return false
+    }
+
+    else if( !(password.match(/[`~!@#$%^&*]/)) ){
+        alert("Please use atleast one special character")
+        document.getElementById('password').focus()
+        return false
+    }
+
+    else if(cpassword==""){
+        alert("Please enter confirm password")
+        document.getElementById('cpassword').focus()
+        return false 
+    }
+
+    else if (cpassword!=password){
+        alert("Password Mismatch")
+        document.getElementById('cpassword').focus()
         return false
     }
 }
