@@ -13,3 +13,25 @@
 // http(hypertext transfer protocol) method :- get: to access , post: to insert , delete: to remove , put: to update , patch: to update 
 // https (hypertext transfer protocol secure) 
 
+// fetch returns promise
+// promise :- has three state
+// 1. Reject
+// 2. Pending
+// 3. Fullfill
+
+// to handel promise we have two keyboards we have to use this both at same time otherwise error occurs
+// 1. async
+// 2. await
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+async function access(){
+    let d = await fetch('https://jsonplaceholder.typicode.com/comments')
+    let s = await d.json()
+    let a = s.map((e)=>{return e.name})
+    console.log(a)
+}
+
+access()
