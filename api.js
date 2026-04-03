@@ -23,15 +23,35 @@
 // 1. async
 // 2. await
 
+// `` is know as temp literals
 
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------------
 
 
 async function access(){
     let d = await fetch('https://jsonplaceholder.typicode.com/comments')
     let s = await d.json()
-    let a = s.map((e)=>{return e.name})
-    console.log(a)
+    // let a = s.map((e)=>{return e.name})
+    // console.log(a)
+    // here e is event object
+    let data = s.map((e)=>`                 
+    <tr>
+        <td> ${e.id} </td>
+        <td> ${e.name} </td>
+        <td> ${e.email} </td>
+    </tr>
+
+    `).join("")
+
+    document.getElementById('showdata').innerHTML = data
 }
 
 access()
+
+
+// Query Selector
+
+let h= document.querySelector(".demo")
+console.log(h);
+
+// querySelectorAll()
